@@ -13,16 +13,6 @@ var scores, roundScore, activePlayer, gamePlaying;
 
 init();
 
-
-//document.querySelector('#current-' + activePlayer).textContent = dice;
-//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-
-
-
-var x = document.querySelector('#score-0').textContent;
-console.log(x);
-init();
-
 document.querySelector('.btn-roll').addEventListener('click', function()
 {
     if(gamePlaying)
@@ -60,7 +50,7 @@ document.querySelector('.btn-hold').addEventListener('click', function()
 
 
         //check if player won the game
-        if(scores[activePlayer] >= 20)
+        if(scores[activePlayer] >= 100)
         {
             document.getElementById('name-' + activePlayer).textContent = 'WINNER!';
             document.querySelector('.dice').style.display = 'none';
@@ -117,45 +107,3 @@ function init()
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.add('active');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
